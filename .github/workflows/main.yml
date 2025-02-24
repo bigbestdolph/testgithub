@@ -18,6 +18,4 @@ jobs:
       - name: Vérifier la variable d'environnement
         run: echo "salut" ${{env.ENV_NAME}}
   
-    steps:
-  - name: Utiliser un secret
-    run: echo "Mon secret est ${{ secrets.MY_SECRET }}"
+
