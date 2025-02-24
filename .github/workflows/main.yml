@@ -1,3 +1,5 @@
+name: Hello World Workflow
+
 on:
   push:
     branches:
@@ -6,11 +8,12 @@ on:
     branches:
       - main
 
+env:
+  ENV_NAME: production
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    # Étape 1 : Vérification du code source
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Vérifier la variable d'environnement
+        run: echo "salut" ${{env.ENV_NAME}}
